@@ -22,5 +22,67 @@
 # f = open('kjkhkh.txt','x')
 # f.close()
 
-a = [1,2,3]
-print(str(a))
+# a = [1,2,3]
+# print(str(a))
+
+# import pyautogui
+# import tkinter as tk
+# import threading
+
+# def updateCoord():
+#     while True:
+#         # Get current mouse position
+#         x, y = pyautogui.position()
+#         # print(y)
+#         # print(f"Mouse position: ({x}, {y})")
+#         entry1.delete(0,tk.END)
+#         entry1.insert(0,str(x))
+#         entry2.delete(0,tk.END)
+#         entry2.insert(0,str(y))
+
+# # Create main window
+
+# root = tk.Tk()
+# root.title("Mouse coordinates")
+# root.configure(bg='#001f3f')  # Dark blue background
+# root.geometry("500x100")
+
+# # Styling
+# label_font = ("Arial", 12)
+# label_fg = "white"
+# entry_bg = "#003366"
+# entry_fg = "white"
+
+# # Create a frame for horizontal layout
+# form_frame = tk.Frame(root, bg=root['bg'])
+# form_frame.pack(pady=20)
+
+# # Username label and entry
+# label1 = tk.Label(form_frame, text="X:", font=label_font, fg=label_fg, bg=root['bg'])
+# label1.pack(side=tk.LEFT, padx=5)
+# entry1 = tk.Entry(form_frame, bg=entry_bg, fg=entry_fg)
+# entry1.pack(side=tk.LEFT, padx=10)
+
+# # Password label and entry
+# label2 = tk.Label(form_frame, text="Y:", font=label_font, fg=label_fg, bg=root['bg'])
+# label2.pack(side=tk.LEFT, padx=5)
+# entry2 = tk.Entry(form_frame, bg=entry_bg, fg=entry_fg)
+# entry2.pack(side=tk.LEFT, padx=10)
+
+# update_thread = threading.Thread(target=updateCoord)
+# update_thread.start()
+
+
+# # Run the application
+# root.mainloop()
+
+# screen dimensions:
+# 1919x1079
+
+# import pyautogui
+
+# # Move mouse to coordinates (500, 300)
+# pyautogui.moveTo(0, 0)
+
+#cursor script:
+

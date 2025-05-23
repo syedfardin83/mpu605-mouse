@@ -20,6 +20,8 @@ while True:
             print(e)
             pass
     print(b)
+
+    # log code
     with open(log_file_name,'a') as f:
         if b==[]:
             pass

@@ -1,7 +1,18 @@
 import serial
 from datetime import datetime
 
-mpu = serial.Serial('COM3',115200)
+try:
+    mpu = serial.Serial('COM3',115200)
+except Exception as e:
+    error = str(e).lower()
+    
+    if 'filenotfound' in error:
+        print('Error: COM3 port is not open')
+        exit()
+    else:
+        print(error)
+        exit()
+
 log_file_name = f'logs/{str(datetime.now()).replace('.',';').replace(':',';')}.csv'
 with open(log_file_name,'w') as f:
     f.write('AccelX,AccelY,AccelZ,GyroX,GyroY,GyroZ')

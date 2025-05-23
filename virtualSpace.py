@@ -65,13 +65,12 @@ while True:
     data = getFilteredData(10)
     ax=data[0]
     ay=data[1]
-    az=round(data[2],1)
+    az=round(data[2]-round(offsets[2],1),1)
 
-    vz=vz+az+0.3
+    vz=round(vz+az,1)
     z=z+vz
 
-    vz=round(vz,1)
     # print(z)
-    # print(vz)
+    print(vz)
     # print(round(az-round(offsets[2],1),1))
-    print(az)
+    # print(az)

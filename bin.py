@@ -84,5 +84,40 @@
 # # Move mouse to coordinates (500, 300)
 # pyautogui.moveTo(0, 0)
 
-#cursor script:
+#virtual space in z coord:
+
+import serial
+
+mpu = serial.Serial('COM3',115200)
+line = mpu.readline().decode('utf-8')
+# this function returns an array
+def getData():
+    line = mpu.readline().decode('utf-8')
+
+    a = line.strip().split(',')
+    b=[]
+    for i in a:
+        try:
+            b.append(float(i))
+        except Exception as e:
+            print(e)
+            pass
+    return b
+
+z=0
+vz=0
+az=0
+while True:
+    data = getData()
+    ax=data[0]
+    ay=data[1]
+    az=round(data[2],1)
+
+    vz=vz+az+0.3
+    z=z+vz
+
+    vz=round(vz,1)
+    # print(z)
+    print(vz)
+    # print(round(az+0.3,1))
 
